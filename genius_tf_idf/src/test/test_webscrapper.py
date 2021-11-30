@@ -1,5 +1,5 @@
 import unittest
-from src.main.webscrapper import WebScrapper
+from webscrapper import WebScrapper
 
 class WebscrapperTestCase(unittest.TestCase):
     def setUp(self) -> None:
