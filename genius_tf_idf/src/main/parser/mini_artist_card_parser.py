@@ -12,3 +12,6 @@ class MiniArtistCardParser:
     def get_artist_name(self):
         title_div = self._root_soup.select_one('div.mini_card-title')
         return title_div.text
+
+    def get_artist_url(self):
+        return self._root_soup.select_one('a')['href']
