@@ -1,5 +1,5 @@
-from .mini_artist_card_parser import MiniArtistCardParser
+from .mini_artist_card import MiniArtistCard
 
 __all__ = [
-    MiniArtistCardParser
+    MiniArtistCard
 ]

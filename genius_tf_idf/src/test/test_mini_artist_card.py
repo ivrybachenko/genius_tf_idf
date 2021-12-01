@@ -1,6 +1,6 @@
 import unittest
 
-from parser import MiniArtistCardParser
+from parser import MiniArtistCard
 
 
 class MiniArtistCardFactory:
@@ -40,24 +40,24 @@ class MiniArtistCardFactoryTestCase(unittest.TestCase):
         self.assertEqual(expected_mini_artist_card, actual_mini_artist_card)
 
 
-class MiniArtistCardParserTestCase(unittest.TestCase):
+class MiniArtistCardTestCase(unittest.TestCase):
 
     def test_get_source(self):
         mini_artist_card_html = MiniArtistCardFactory().create(artist_name='Trent Tomlinson',
                                                                artist_url='https://genius.com/artists/Trent-tomlinson')
-        parser = MiniArtistCardParser(mini_artist_card_html)
+        parser = MiniArtistCard(mini_artist_card_html)
         self.assertEqual(mini_artist_card_html, parser.get_source())
 
     def test_get_artist_name(self):
         mini_artist_card_html = MiniArtistCardFactory().create(artist_name='Trent Tomlinson',
                                                                artist_url='https://genius.com/artists/Trent-tomlinson')
-        parser = MiniArtistCardParser(mini_artist_card_html)
+        parser = MiniArtistCard(mini_artist_card_html)
         self.assertEqual('Trent Tomlinson', parser.get_artist_name())
 
     def test_get_artist_url(self):
         mini_artist_card_html = MiniArtistCardFactory().create(artist_name='Trent Tomlinson',
                                                                artist_url='https://genius.com/artists/Trent-tomlinson')
-        parser = MiniArtistCardParser(mini_artist_card_html)
+        parser = MiniArtistCard(mini_artist_card_html)
         self.assertEqual('https://genius.com/artists/Trent-tomlinson', parser.get_artist_url())
 
 if __name__ == '__main__':
