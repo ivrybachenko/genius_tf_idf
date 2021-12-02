@@ -18,8 +18,19 @@ class MiniArtistCardBuilder:
     def with_artist_name(self, artist_name):
         return MiniArtistCardBuilder(self._template.replace('{ARTIST_NAME}', artist_name))
 
-    def build_html(self):
-        return self._template
+    def is_artist_name_filled(self):
+        return '{ARTIST_NAME}' not in self._template
 
     def with_artist_url(self, artist_url):
         return MiniArtistCardBuilder(self._template.replace('{URL}', artist_url))
+
+    def is_artist_url_filled(self):
+        return '{URL}' not in self._template
+
+    def are_all_fields_filled(self):
+        return self.is_artist_name_filled() and self.is_artist_url_filled()
+
+    def build_html(self):
+        if not self.are_all_fields_filled():
+            raise ValueError
+        return self._template
