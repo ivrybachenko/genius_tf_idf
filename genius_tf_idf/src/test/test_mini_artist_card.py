@@ -16,13 +16,15 @@ class MiniArtistCardTestCase(unittest.TestCase):
 
     def test_get_artist_name(self):
         mini_artist_card_html = MiniArtistCardBuilder() \
-            .with_artist_name('Trent Tomlinson')\
+            .with_artist_name('Trent Tomlinson') \
+            .with_artist_url('https://genius.com/artists/Trent-tomlinson') \
             .build_html()
         parser = MiniArtistCard(mini_artist_card_html)
         self.assertEqual('Trent Tomlinson', parser.get_artist_name())
 
     def test_get_artist_url(self):
         mini_artist_card_html = MiniArtistCardBuilder() \
+            .with_artist_name('Trent Tomlinson') \
             .with_artist_url('https://genius.com/artists/Trent-tomlinson') \
             .build_html()
         parser = MiniArtistCard(mini_artist_card_html)
