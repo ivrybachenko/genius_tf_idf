@@ -2,7 +2,7 @@ import unittest
 
 from stub.mini_artist_card_builder import MiniArtistCardBuilder
 from stub.search_result_item_builder import SearchResultItemBuilder
-from parser.search_result_section import SearchResultSection
+from parser.component import SearchResultSection
 from stub.search_result_section_builder import SearchResultSectionBuilder
 
 

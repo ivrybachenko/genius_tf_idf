@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from parser.mini_song_card import MiniSongCard
+from parser.component.mini_song_card import MiniSongCard
 
 
 class ArtistPage:

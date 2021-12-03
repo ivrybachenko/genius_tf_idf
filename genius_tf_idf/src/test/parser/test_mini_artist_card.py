@@ -1,6 +1,6 @@
 import unittest
 
-from parser import MiniArtistCard
+from parser.component import MiniArtistCard
 from stub.mini_artist_card_builder import MiniArtistCardBuilder
 
 

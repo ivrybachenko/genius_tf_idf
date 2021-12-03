@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
+
 class WebScrapper:
     def __init__(self):
         self._driver = self._create_driver()

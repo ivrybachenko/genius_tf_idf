@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from parser import MiniArtistCard
+from parser.component import MiniArtistCard
 
 
 class SearchResultSection():

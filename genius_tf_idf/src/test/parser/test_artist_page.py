@@ -1,6 +1,6 @@
 import unittest
 
-from parser import ArtistPage
+from parser.page import ArtistPage
 from stub.artist_page_builder import ArtistPageBuilder
 from stub.mini_song_card_builder import MiniSongCardBuilder
 
