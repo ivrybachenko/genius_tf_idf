@@ -28,13 +28,18 @@ class SearchResultSectionTestCase(unittest.TestCase):
         self.assertEqual('Artists', parser.get_label())
 
     def test_get_items(self):
-        item_html = self.create_item(MiniArtistCardBuilder()
+        item1_html = self.create_item(MiniArtistCardBuilder()
                                      .with_artist_name('Trent Tomlinson')
                                      .with_artist_url('https://genius.com/artists/Trent-tomlinson')
                                      .build_html())
+        item2_html = self.create_item(MiniArtistCardBuilder()
+                                      .with_artist_name('Bob Marley')
+                                      .with_artist_url('https://genius.com/artists/Bob-marley')
+                                      .build_html())
         search_result_section_html = SearchResultSectionBuilder()\
             .with_label('Artists')\
-            .with_item(item_html)\
+            .with_item(item1_html) \
+            .with_item(item2_html) \
             .build_html()
 
         parser = SearchResultSection(search_result_section_html)
@@ -42,6 +47,10 @@ class SearchResultSectionTestCase(unittest.TestCase):
             {
                 'artist_name': 'Trent Tomlinson',
                 'artist_url': 'https://genius.com/artists/Trent-tomlinson'
+            },
+            {
+                'artist_name': 'Bob Marley',
+                'artist_url': 'https://genius.com/artists/Bob-marley'
             }
         ]
         self.assertEqual(expected_items, parser.get_items())

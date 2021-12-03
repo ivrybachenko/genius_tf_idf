@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
 
+from parser import MiniArtistCard
+
 
 class SearchResultSection():
     def __init__(self, html):
@@ -17,4 +19,16 @@ class SearchResultSection():
             return None
 
     def get_items(self):
-        pass
+        if self.get_label() == 'Artists':
+            return self.get_artists()
+        return []
+
+    def get_artists(self):
+        artists = []
+        artist_cards = self._root_soup.select('mini-artist-card')
+        for artist_card in artist_cards:
+            artists.append({
+                'artist_name': MiniArtistCard(str(artist_card)).get_artist_name(),
+                'artist_url': MiniArtistCard(str(artist_card)).get_artist_url()
+            })
+        return artists
