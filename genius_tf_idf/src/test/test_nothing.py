@@ -1,8 +1,8 @@
 import unittest
 
 
-class MyTestCase(unittest.TestCase):
-    def test_nothing(self):
+class NothingTestCase(unittest.TestCase):
+    def test_that_testing_works(self):
         self.assertEqual(True, True)
 
 
