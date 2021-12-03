@@ -1,7 +1,7 @@
 import unittest
 
-from parser.mini_artist_card_builder import MiniArtistCardBuilder
-from parser.search_result_item_builder import SearchResultItemBuilder
+from stub.mini_artist_card_builder import MiniArtistCardBuilder
+from stub.search_result_item_builder import SearchResultItemBuilder
 
 
 class SearchResultItemBuilderTestCase(unittest.TestCase):

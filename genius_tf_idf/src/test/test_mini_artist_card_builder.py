@@ -1,6 +1,6 @@
 import unittest
 
-from parser.mini_artist_card_builder import MiniArtistCardBuilder
+from stub.mini_artist_card_builder import MiniArtistCardBuilder
 
 
 class MiniArtistCardBuilderTestCase(unittest.TestCase):

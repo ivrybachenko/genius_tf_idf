@@ -1,9 +1,9 @@
 import unittest
 
-from parser.mini_artist_card_builder import MiniArtistCardBuilder
-from parser.search_result_item_builder import SearchResultItemBuilder
+from stub.mini_artist_card_builder import MiniArtistCardBuilder
+from stub.search_result_item_builder import SearchResultItemBuilder
 from parser.search_result_section import SearchResultSection
-from parser.search_result_section_builder import SearchResultSectionBuilder
+from stub.search_result_section_builder import SearchResultSectionBuilder
 
 
 class SearchResultSectionTestCase(unittest.TestCase):
