@@ -12,5 +12,8 @@ class WebScrapper:
 
     def _create_driver(self):
         options = Options()
-        options.headless = True
+        options.headless = False
         return webdriver.Firefox(options=options)
+
+    def dispose(self):
+        self._driver.quit()
