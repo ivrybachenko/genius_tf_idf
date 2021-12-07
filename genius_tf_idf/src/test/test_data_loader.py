@@ -3,7 +3,7 @@ import unittest
 from data import DataLoader
 
 
-class NothingTestCase(unittest.TestCase):
+class DataLoaderTestCase(unittest.TestCase):
     def test_that_count_is_204(self):
         loader = DataLoader()
         songs = loader.load()
